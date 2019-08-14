@@ -1,4 +1,4 @@
-export const  messages = {
+const messages = {
     results: [
         { username: 'Jono', text: 'Do my bidding!', roomname: 'codestates'  },
         { username: 'Hyona', text: 'Hello', roomname: 'codestates'  },
@@ -8,3 +8,5 @@ export const  messages = {
         { username: 'Lee', text: 'Lorem Ipsum', roomname: 'codestates'  },
         ],
   };
+
+  module.exports = messages;

@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-    <form action="/" method="POST">
-        <input placeholder="First name" name="create_first_name" />
-        <input placeholder="Last name" name="create_last_name" />
-        <button>Submit</button>
-    </form>
-</body>
-
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+      <!-- Your HTML goes here! -->
+      <form id='form'>
+        <select name="roomname" id="roomname"></select>
+        <input type="text" name="text" id ="text">
+        <button type="button" id="postButton" onclick="app.postEvent()" >Submit</button>
+      </form>
+    </div>
+    <div id="chats"></div>
+    <!-- your scripts -->
+    <script src="./fetch.js"></script>
+    
+    <script>
+        // function submitChat() {
+          
+          // var xhttp = new XMLHttpRequest();
+          // xhttp.onreadystatechange = function() {
+          //   if (this.readyState == 4 && this.status == 200) {
+          //     let updated = JSON.parse(this.responseText);
+          //     // console.log(updated);
+          //   // document.getElementById("chats").innerHTML = this.responseText;
+          //   }
+          // };
+          // xhttp.open("GET", "http://52.78.206.149:3000/messages", true);
+          // xhttp.send();
+          
+          // app.clearMessages();
+          // app.init(updated);
+          // app.init('testview',testview);
+        // }
+  
+        // let roomname = document.getElementById('roomname');
+        // let roomList = app.getRoomList();
+        // console.log('바깥', roomList, roomList.length);
+        
+  
+      </script>
+  </body>
 </html>
