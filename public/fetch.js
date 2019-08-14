@@ -55,10 +55,9 @@ const app = {
       headers: {
         'Content-Type': 'application/json',
       },
-    })
-      .then (response => {
-        return response.json ();
-      });
+    }).then (response => {
+      return response.json ();
+    });
 
     // send 후에 window.fetch 가 있어야함
   },
@@ -100,4 +99,3 @@ fetch (app.server).then (res => res.json ()).then (res => {
   // 서버에 요구한다.
   app.init (res.results);
 });
-
