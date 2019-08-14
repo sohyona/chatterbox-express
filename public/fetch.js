@@ -37,6 +37,7 @@ const app = {
   },
 
   init: function (DATA) {
+    app.clearMessages();
     for (let message in DATA) {
       app.addMessage (DATA[message]);
     }
@@ -56,7 +57,7 @@ const app = {
         'Content-Type': 'application/json',
       },
     }).then (response => {
-      return response.json ();
+      return response;
     });
 
     // send 후에 window.fetch 가 있어야함
