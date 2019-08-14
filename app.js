@@ -4,7 +4,7 @@ const morgan = require ('morgan'); // print data logs
 const fakeData = require ('./routes/fakeData.js');
 const bodyParser = require ('body-parser');
 
-app.use (bodyParser.urlencoded ({extended: false}));
+app.use (bodyParser.urlencoded ({extended: true}));
 app.use (express.static ('./public'));
 app.use (morgan ('short'));
 // app.use (bodyParser ().json ());
@@ -12,7 +12,7 @@ app.use (morgan ('short'));
 const router = require ('./routes/router.js');
 
 app.use (router);
-
+app.use (bodyParser.json ());
 app.get ('/', (req, res) => {
   console.log ('responding to root route');
   res.send ('hello from rooooooot');

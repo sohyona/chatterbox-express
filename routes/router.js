@@ -2,7 +2,6 @@ const express = require ('express');
 const router = express.Router ();
 const fakeData = require ('./fakeData.js');
 
-
 router.get ('/classes/messages', (req, res) => {
   console.log ('get success');
   console.log (req.body);
